@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
-import { Lora, Inter } from "next/font/google";
-import "./globals.css";
 import { Header } from "@/components/header";
+import type { Metadata } from "next";
+import { Inter, Lora } from "next/font/google";
+import "./globals.css";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -25,9 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lora.variable} ${inter.variable} antialiased`}>
+      <body
+        className={`${lora.variable} ${inter.variable} antialiased min-h-screen relative`}
+      >
         <Header />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
