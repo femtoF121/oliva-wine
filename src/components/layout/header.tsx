@@ -1,8 +1,8 @@
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
+import Logo from "@public/logo.svg";
 import Link from "next/link";
 import { FiHome, FiShoppingCart } from "react-icons/fi";
-import { Button } from "../ui/button";
 
 export function Header({
   variant = "fill",
@@ -28,7 +28,7 @@ export function Header({
           <Link href="/catalog">
             <Button variant="link">Catalog</Button>
           </Link>
-          <Image src={"/logo.svg"} alt="Oliva wine" height={48} width={92} />
+          <Logo height={48} fill="#211F1A" />
           <Link href="/contact-us">
             <Button variant="link">Contact Us</Button>
           </Link>
