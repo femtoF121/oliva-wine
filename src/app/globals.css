@@ -4,10 +4,47 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-lora: var(--font-lora);
   --font-inter: var(--font-inter);
+
+  --color-primary: var(--primary);
+  --color-primary-variant: var(--primary-variant);
+  --color-on-primary: var(--on-primary);
+  --color-secondary: var(--secondary);
+  --color-secondary-variant: var(--secondary-variant);
+  --color-on-secondary: var(--on-secondary);
+  --color-on-secondary-variant: var(--on-secondary-variant);
+  --color-background: var(--background);
+  --color-on-background: var(--on-background);
+  --color-on-background-inverse: var(--on-background-inverse);
+  --color-surface: var(--surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-divider: var(--divider);
+  --color-outline: var(--outline);
+  --color-hover-primary: var(--hover-primary);
+  --color-hover-secondary: var(--hover-secondary);
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+  --color-accent: var(--accent);
+  --color-accent-variant: var(--accent-variant);
+  --background-image-gradient-accent: var(--gradient-accent);
+  --background-image-gradient-accent-variant: var(--gradient-accent-variant);
+  --background-image-gradient-secondary: var(--gradient-secondary);
+  --background-image-gradient-secondary-variant: var(
+    --gradient-secondary-variant
+  );
+
+  /* #region Shadcn theme variables */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-foreground: var(--foreground);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -26,41 +63,68 @@
   --color-border: var(--border);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
+  /* #endregion */
 }
 
 :root {
+  --primary: #f7bf11;
+  --primary-variant: #ffd553;
+  --on-primary: #1d1a15;
+  --secondary: #898121;
+  --secondary-variant: #bdb44a;
+  --on-secondary: #1c1c12;
+  --on-secondary-variant: #686601;
+  --background: #fdeed1;
+  --on-background: #211f1a;
+  --on-background-inverse: #fffbf2;
+  --surface: #fff4e0;
+  --surface-variant: #fffbf2;
+  --on-surface: #2b2823;
+  --on-surface-variant: #99907f;
+  --divider: #e3d6bc;
+  --outline: #b1a793;
+  --hover-primary: rgba(255, 226, 135, 0.4);
+  --hover-secondary: rgba(189, 180, 74, 0.3);
+  --error: #9c1f1f;
+  --on-error: #fff8f8;
+  --accent: #f7bf11;
+  --accent-variant: #e6cc4d;
+  --gradient-accent: radial-gradient(
+    85.71% 85.71% at 50% 50%,
+    #e7b10a 0%,
+    #ffd553 100%
+  );
+  --gradient-accent-variant: radial-gradient(
+    95.41% 95.41% at 50% 50%,
+    #e7b10a 0%,
+    #fdeed1 100%
+  );
+  --gradient-secondary: linear-gradient(135deg, #ffd553 0%, #bdb44a 100%);
+  --gradient-secondary-variant: linear-gradient(
+    215.14deg,
+    #bdb44a 17.94%,
+    #71701d 110.18%
+  );
+
+  /* #region Shadcn UI variables */
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -79,49 +143,18 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* #endregion */
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
