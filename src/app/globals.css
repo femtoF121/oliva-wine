@@ -126,4 +126,17 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+
+  @keyframes wine-wave {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% + 85px));
+    }
+  }
+
+  .animate-wine {
+    animation: wine-wave 4s ease-in-out infinite alternate;
+  }
 }
