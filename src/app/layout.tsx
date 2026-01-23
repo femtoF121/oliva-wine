@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${lora.variable} ${inter.variable} antialiased min-h-screen relative`}
       >
         <Header />
-        <main className="pt-20">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
