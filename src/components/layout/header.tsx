@@ -12,10 +12,8 @@ export function Header({
   return (
     <header
       className={cn(
-        "sticky top-0 w-full font-lora text-[#211F1A]",
-        variant === "gradient"
-          ? "bg-[radial-gradient(95.41%_95.41%_at_50%_50%,#E7B10A,#FDEED1)]"
-          : "bg-[#FDEED1]",
+        "sticky top-0 w-full font-lora text-on-background",
+        variant === "gradient" ? "bg-gradient-accent-variant" : "bg-background",
       )}
     >
       <div className="mx-auto max-w-360 px-20 py-4 flex justify-between items-center">
