@@ -7,6 +7,8 @@
   --font-lora: var(--font-lora);
   --font-inter: var(--font-inter);
 
+  --max-width-layout: 1440px;
+
   --color-primary: var(--primary);
   --color-primary-variant: var(--primary-variant);
   --color-on-primary: var(--on-primary);
@@ -146,7 +148,13 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background:
+      linear-gradient(
+        color-mix(in srgb, var(--background) 97%, transparent),
+        color-mix(in srgb, var(--background) 97%, transparent)
+      ),
+      left / cover url("/bg-texture.webp");
   }
 
   button:not(:disabled),

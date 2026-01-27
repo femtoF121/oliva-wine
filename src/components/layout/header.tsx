@@ -12,11 +12,11 @@ export function Header({
   return (
     <header
       className={cn(
-        "sticky top-0 w-full font-lora text-on-background",
+        "sticky z-20 top-0 w-full font-lora text-on-background",
         variant === "gradient" ? "bg-gradient-accent-variant" : "bg-background",
       )}
     >
-      <div className="mx-auto max-w-360 px-20 py-4 flex justify-between items-center">
+      <div className="mx-auto max-w-layout px-20 py-4 flex justify-between items-center">
         <Link href="/">
           <Button variant="ghost" size="icon">
             <FiHome className="size-7" />
