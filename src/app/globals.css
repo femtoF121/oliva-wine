@@ -56,6 +56,7 @@
   --color-input: var(--input);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
+  --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
@@ -90,16 +91,14 @@
   --hover-variant: rgba(189, 180, 74, 0.3);
   --error: #9c1f1f;
   --on-error: #fff8f8;
-  --accent: #f7bf11;
-  --accent-variant: #e6cc4d;
   --gradient-accent: radial-gradient(
     85.71% 85.71% at 50% 50%,
-    #e7b10a 0%,
+    #f7bf11 0%,
     #ffd553 100%
   );
   --gradient-accent-variant: radial-gradient(
     95.41% 95.41% at 50% 50%,
-    #e7b10a 0%,
+    #f7bf11 0%,
     #fdeed1 100%
   );
   --gradient-secondary: linear-gradient(135deg, #ffd553 0%, #bdb44a 100%);
@@ -119,6 +118,7 @@
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);

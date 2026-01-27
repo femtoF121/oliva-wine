@@ -24,11 +24,15 @@ export function Header({
         </Link>
         <div className="flex gap-14 items-center justify-center">
           <Link href="/catalog">
-            <Button variant="link">Catalog</Button>
+            <Button variant="link" className="text-xl">
+              Catalog
+            </Button>
           </Link>
           <Logo height={48} fill="#211F1A" />
           <Link href="/contact-us">
-            <Button variant="link">Contact Us</Button>
+            <Button variant="link" className="text-xl">
+              Contact Us
+            </Button>
           </Link>
         </div>
         <Link href="/cart">
