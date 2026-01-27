@@ -9,8 +9,15 @@ export function ToTopButton() {
   };
 
   return (
-    <Button size="icon" variant="ghost" onClick={scrollToTop}>
-      <FiChevronUp className="size-6" />
+    <Button
+      size="icon"
+      variant="ghost"
+      onClick={scrollToTop}
+      className="bg-gradient-secondary group"
+    >
+      <span className="group-hover:-translate-y-1 transition-transform">
+        <FiChevronUp className="size-6 text-on-background" />
+      </span>
     </Button>
   );
 }

@@ -5,13 +5,14 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="w-full font-inter bg-[#BDB44A]">
+    <footer className="w-full font-inter bg-secondary-variant">
       <div className="flex gap-6 justify-between items-center mx-auto max-w-360 px-20 py-12">
         <div
           className={cn(
-            "flex gap-16 text-[#1C1C12] leading-5",
-            "[&_h5]:mb-6 [&_h5]:text-2xl [&_h5]:text-[#5E5817] [&_h5]:font-medium [&_h5]:uppercase [&_h5]:font-lora",
+            "flex gap-16 text-on-secondary leading-5",
+            "[&_h5]:mb-6 [&_h5]:text-2xl [&_h5]:text-on-secondary-variant [&_h5]:font-medium [&_h5]:uppercase [&_h5]:font-lora",
             "[&_ul]:space-y-4",
+            "[&_a]:hover:text-on-secondary-variant [&_a]:transition-colors",
           )}
         >
           <div>

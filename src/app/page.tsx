@@ -5,7 +5,7 @@ export default async function Home() {
   const { data: dataById } = await getProductById("wine-2");
 
   return (
-    <div className="flex items-center justify-center bg-zinc-100 gap-4 h-screen">
+    <div className="flex-1 flex items-center justify-center gap-4">
       {data.map((wine) => (
         <div key={wine.id} className="border p-4 rounded-lg bg-background ">
           {wine.name}

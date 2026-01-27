@@ -12,10 +12,8 @@ export function Header({
   return (
     <header
       className={cn(
-        "sticky top-0 w-full font-lora text-[#211F1A]",
-        variant === "gradient"
-          ? "bg-[radial-gradient(95.41%_95.41%_at_50%_50%,#E7B10A,#FDEED1)]"
-          : "bg-[#FDEED1]",
+        "sticky top-0 w-full font-lora text-on-background",
+        variant === "gradient" ? "bg-gradient-accent-variant" : "bg-background",
       )}
     >
       <div className="mx-auto max-w-360 px-20 py-4 flex justify-between items-center">
@@ -26,11 +24,15 @@ export function Header({
         </Link>
         <div className="flex gap-14 items-center justify-center">
           <Link href="/catalog">
-            <Button variant="link">Catalog</Button>
+            <Button variant="link" className="text-xl">
+              Catalog
+            </Button>
           </Link>
           <Logo height={48} fill="#211F1A" />
           <Link href="/contact-us">
-            <Button variant="link">Contact Us</Button>
+            <Button variant="link" className="text-xl">
+              Contact Us
+            </Button>
           </Link>
         </div>
         <Link href="/cart">
