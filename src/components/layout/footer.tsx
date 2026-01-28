@@ -49,20 +49,20 @@ export function Footer() {
             </Typography>
             <div className="grid grid-cols-2 gap-4">
               <Image
-                src="/mastercard.png"
+                src="/footer/mastercard.png"
                 alt="Mastercard"
                 width={56}
                 height={32}
               />
-              <Image src="/visa.png" alt="Visa" width={56} height={32} />
+              <Image src="/footer/visa.png" alt="Visa" width={56} height={32} />
               <Image
-                src="/google-pay.png"
+                src="/footer/google-pay.png"
                 alt="Google Pay"
                 width={56}
                 height={32}
               />
               <Image
-                src="/apple-pay.png"
+                src="/footer/apple-pay.png"
                 alt="Apple Pay"
                 width={56}
                 height={32}
