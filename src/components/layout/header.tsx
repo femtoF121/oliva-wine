@@ -17,7 +17,7 @@ export function Header({
         variant === "gradient" ? "bg-gradient-accent-variant" : "bg-background",
       )}
     >
-      <div className="mx-auto max-w-layout px-20 py-4 flex justify-between items-center">
+      <div className="container-layout py-4 flex justify-between items-center">
         <Button variant="ghost" size="icon" asChild>
           <Link href="/">
             <FiHome className="size-7" />

@@ -174,4 +174,8 @@
   .animate-wine {
     animation: wine-wave 4s ease-in-out infinite alternate;
   }
+
+  .container-layout {
+    @apply max-w-layout px-20 mx-auto w-full;
+  }
 }

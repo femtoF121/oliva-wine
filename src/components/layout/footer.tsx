@@ -7,7 +7,7 @@ import { Typography } from "../ui/typography";
 export function Footer() {
   return (
     <footer className="w-full font-inter bg-secondary-variant">
-      <div className="flex gap-6 justify-between items-center mx-auto max-w-layout px-20 py-12">
+      <div className="flex gap-6 justify-between items-center container-layout py-12">
         <div
           className={cn(
             "flex gap-16 text-on-secondary leading-5",
