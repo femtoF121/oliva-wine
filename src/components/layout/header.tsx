@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import Logo from "@public/logo.svg";
 import Link from "next/link";
 import { FiHome, FiShoppingCart } from "react-icons/fi";
+import { Typography } from "../ui/typography";
 
 export function Header({
   variant = "fill",
@@ -17,29 +18,33 @@ export function Header({
       )}
     >
       <div className="mx-auto max-w-layout px-20 py-4 flex justify-between items-center">
-        <Link href="/">
-          <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="icon" asChild>
+          <Link href="/">
             <FiHome className="size-7" />
-          </Button>
-        </Link>
+          </Link>
+        </Button>
         <div className="flex gap-14 items-center justify-center">
-          <Link href="/catalog">
-            <Button variant="link" className="text-xl">
-              Catalog
-            </Button>
-          </Link>
-          <Logo height={48} fill="#211F1A" />
-          <Link href="/contact-us">
-            <Button variant="link" className="text-xl">
-              Contact Us
-            </Button>
-          </Link>
-        </div>
-        <Link href="/cart">
-          <Button variant="ghost" size="icon">
-            <FiShoppingCart className="size-7" />
+          <Button variant="link" asChild>
+            <Link href="/catalog">
+              <Typography variant="title-3" as="span">
+                Catalog
+              </Typography>
+            </Link>
           </Button>
-        </Link>
+          <Logo height={48} className="fill-on-background" />
+          <Button variant="link" asChild>
+            <Link href="/contact-us">
+              <Typography variant="title-3" as="span">
+                Contact Us
+              </Typography>
+            </Link>
+          </Button>
+        </div>
+        <Button variant="ghost" size="icon" asChild>
+          <Link href="/cart">
+            <FiShoppingCart className="size-7" />
+          </Link>
+        </Button>
       </div>
     </header>
   );
