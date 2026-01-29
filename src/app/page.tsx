@@ -1,4 +1,5 @@
 import { BenefitsSection } from "@/components/home/benefits-section";
+import { CardCarousel } from "@/components/home/card-carousel";
 import { HeroSection } from "@/components/home/hero-section";
 import { SectionDivider } from "@/components/home/section-divider";
 import { getProductById, getProducts } from "@/lib/api/products";
@@ -13,15 +14,16 @@ export default async function Home() {
       <HeroSection />
       <div className="mx-auto mt-10 mb-20 flex flex-col items-center gap-20">
         <section className="container-layout">
-          <SectionDivider text="Fine wines, great prices" />
+          <SectionDivider className="mb-14" text="Fine wines, great prices" />
+          <CardCarousel />
         </section>
         <BenefitsSection />
         <section className="container-layout">
-          <SectionDivider text="Fine wines, great prices" />
+          <SectionDivider className="mb-14" text="Best-selling wines" />
         </section>
         <section>join ours newsletter</section>
         <section className="container-layout">
-          <SectionDivider text="Fine wines, great prices" />
+          <SectionDivider className="mb-14" text="Explore wines" />
         </section>
         <section className="h-85 w-full overflow-hidden">
           <Image
