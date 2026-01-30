@@ -15,7 +15,7 @@ export default async function Home() {
       <div className="mx-auto mt-10 mb-20 flex flex-col items-center gap-20">
         <section className="container-layout">
           <SectionDivider className="mb-14" text="Fine wines, great prices" />
-          <CardCarousel />
+          <CardCarousel wines={data} />
         </section>
         <BenefitsSection />
         <section className="container-layout">

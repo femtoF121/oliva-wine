@@ -2,13 +2,19 @@
 
 import { cn } from "@/lib/utils";
 import { EmblaCarouselType } from "embla-carousel";
-import { useEffect, useState } from "react";
+import { ComponentProps, useEffect, useState } from "react";
+
+interface CarouselDotsProps extends ComponentProps<"div"> {
+  emblaApi: EmblaCarouselType | undefined;
+  onAction?: () => void;
+}
 
 export function CarouselDots({
   emblaApi,
-}: {
-  emblaApi: EmblaCarouselType | undefined;
-}) {
+  onAction,
+  className,
+  ...rest
+}: CarouselDotsProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
@@ -38,12 +44,12 @@ export function CarouselDots({
   }, [emblaApi]);
 
   const goToIndex = (index: number) => {
-    emblaApi?.plugins().autoplay?.stop();
+    onAction?.();
     emblaApi?.scrollTo(index);
   };
 
   return (
-    <div className="mt-4 flex justify-center gap-2">
+    <div {...rest} className={cn("mt-4 flex justify-center gap-2", className)}>
       {scrollSnaps.map((_, index) => (
         <button
           key={index}
