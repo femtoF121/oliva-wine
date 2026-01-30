@@ -8,6 +8,7 @@
   --font-inter: var(--font-inter);
 
   --max-width-layout: 1440px;
+  --radius-card: 4px;
 
   --color-primary: var(--primary);
   --color-primary-variant: var(--primary-variant);
@@ -28,8 +29,8 @@
   --color-outline: var(--outline);
   --color-hover: var(--hover);
   --color-hover-variant: var(--hover-variant);
+  --color-red: var(--red);
   --color-error: var(--error);
-  --color-on-error: var(--on-error);
   --color-accent: var(--accent);
   --color-accent-variant: var(--accent-variant);
   --background-image-gradient-accent: var(--gradient-accent);
@@ -62,6 +63,7 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
+  --color-on-error: var(--on-error);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-primary-foreground: var(--primary-foreground);
   --color-popover-foreground: var(--popover-foreground);
@@ -92,6 +94,7 @@
   --hover: rgba(254, 246, 230, 0.3);
   --hover-variant: rgba(189, 180, 74, 0.3);
   --error: #9c1f1f;
+  --red: #b23131;
   --on-error: #fff8f8;
   --gradient-accent: radial-gradient(
     85.71% 85.71% at 50% 50%,

@@ -6,6 +6,8 @@ export type WineType =
   | "dessert"
   | "fortified";
 
+export type WineFeature = "new" | "best";
+
 export interface Wine {
   id: string;
   name: string;
@@ -15,8 +17,9 @@ export interface Wine {
   year: number;
   alcohol: number;
   volume: number;
-  rating: number; // Rating out of 100
-  price: number; // Price in USD
+  price: number;
+  discountedPrice?: number;
+  feature?: WineFeature;
   image: string;
   description?: string;
 }
