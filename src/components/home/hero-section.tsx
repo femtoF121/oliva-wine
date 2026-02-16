@@ -5,7 +5,7 @@ import { Typography } from "../ui/typography";
 
 export function HeroSection() {
   return (
-    <div className="relative w-full">
+    <section className="relative w-full">
       <div className="max-w-210 text-center absolute z-10 left-1/2 -translate-x-1/2 top-1/9">
         <div className="pb-10 bg-[radial-gradient(55%_40%_at_50%_60%,rgba(0,0,0,0.5),transparent)]">
           <Typography variant="heading-1" as="h1" className="text-primary">
@@ -30,6 +30,6 @@ export function HeroSection() {
           alt="vineyard with bootle of wine"
         />
       </div>
-    </div>
+    </section>
   );
 }

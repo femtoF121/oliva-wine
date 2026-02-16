@@ -10,7 +10,7 @@ export function SectionDivider({ text, className, ...rest }: SectionDivider) {
   return (
     <div {...rest} className={cn("flex items-center gap-8", className)}>
       <Divider />
-      <Typography variant="heading-2" as="h2" className="text-secondary">
+      <Typography variant="heading-2" as="h2" gradient="secondary-variant">
         {text}
       </Typography>
       <Divider />

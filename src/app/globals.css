@@ -166,16 +166,30 @@
   }
 
   @keyframes wine-wave {
-    0% {
+    from {
       transform: translateX(0);
     }
-    100% {
+    to {
       transform: translateX(calc(-100% + 85px));
     }
   }
 
   .animate-wine {
     animation: wine-wave 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes scroll-text {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll-text {
+    animation: scroll-text 15s linear infinite;
+    will-change: transform;
   }
 
   .container-layout {

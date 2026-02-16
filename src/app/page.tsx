@@ -1,9 +1,9 @@
 import { BenefitsSection } from "@/components/home/benefits-section";
 import { CardCarousel } from "@/components/home/card-carousel";
 import { HeroSection } from "@/components/home/hero-section";
+import { NewsletterSection } from "@/components/home/newsletter-section";
 import { SectionDivider } from "@/components/home/section-divider";
 import { getProductById, getProducts } from "@/lib/api/products";
-import Image from "next/image";
 
 export default async function Home() {
   const { data } = await getProducts();
@@ -20,19 +20,13 @@ export default async function Home() {
         <BenefitsSection />
         <section className="container-layout">
           <SectionDivider className="mb-14" text="Best-selling wines" />
+          <CardCarousel
+            wines={data.filter(({ feature }) => feature === "best")}
+          />
         </section>
-        <section>join ours newsletter</section>
+        <NewsletterSection />
         <section className="container-layout">
           <SectionDivider className="mb-14" text="Explore wines" />
-        </section>
-        <section className="h-85 w-full overflow-hidden">
-          <Image
-            width={1440}
-            height={340}
-            src="/home/divider.webp"
-            alt="grape"
-            className="w-full h-full object-cover object-center"
-          />
         </section>
       </div>
     </div>

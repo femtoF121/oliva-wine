@@ -27,6 +27,7 @@ export const wines: Wine[] = [
     alcohol: 8.5,
     volume: 750,
     price: 28,
+    feature: "best",
     image: "/wines/wine2.png",
     description:
       "Light-bodied white wine with fresh acidity, floral aromas and notes of green apple.",

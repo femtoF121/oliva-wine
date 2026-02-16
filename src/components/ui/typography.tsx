@@ -4,7 +4,7 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-const typographyVariants = cva("text-foreground font-inter", {
+const typographyVariants = cva("font-inter", {
   variants: {
     variant: {
       "heading-1":
@@ -26,9 +26,15 @@ const typographyVariants = cva("text-foreground font-inter", {
       "caption-1": "text-[16px] leading-[20px] font-light",
       "caption-2": "text-[14px] leading-[18px] font-light",
     },
+    gradient: {
+      default: "text-foreground",
+      "secondary-variant":
+        "bg-clip-text bg-gradient-secondary-variant text-transparent",
+    },
   },
   defaultVariants: {
     variant: "body-1",
+    gradient: "default",
   },
 });
 
@@ -49,13 +55,14 @@ type TypographyProps = React.HTMLAttributes<HTMLElement> &
 const Typography: React.FC<TypographyProps> = ({
   className,
   variant = "body-1",
+  gradient = "default",
   as,
   ...props
 }) => {
   const Comp = as ?? defaultTagByVariant[variant!] ?? "p";
   return (
     <Comp
-      className={cn(typographyVariants({ variant }), className)}
+      className={cn(typographyVariants({ variant, gradient }), className)}
       {...props}
     />
   );
