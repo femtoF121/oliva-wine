@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+import { TextInput } from "@/components/ui/text-input";
 import { Typography } from "../../ui/typography";
 import { Marquee } from "./marquee";
 
@@ -23,8 +25,11 @@ export function NewsletterSection() {
                 Subscribe to our newsletter and be the first to discover new
                 arrivals and exclusive offers.
               </Typography>
-              <div className="w-145 h-12">Enter your email</div>
-              {/* TODO: create input and use it here  */}
+              <TextInput
+                placeholder="Enter your email"
+                className="rounded-r-none"
+              />
+              <Button className="w-54 rounded-l-none">Subscribe</Button>
             </div>
           </div>
         </div>
