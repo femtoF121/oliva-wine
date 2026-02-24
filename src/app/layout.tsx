@@ -27,10 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${lora.variable} ${inter.variable} antialiased min-h-screen relative`}
+        className={`${lora.variable} ${inter.variable} antialiased min-h-screen relative flex flex-col`}
       >
         <Header />
-        <main>{children}</main>
+        <main className="flex-1 flex flex-col">{children}</main>
         <Footer />
       </body>
     </html>

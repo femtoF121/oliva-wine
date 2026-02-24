@@ -10,7 +10,7 @@ export default function Error({
   reset: () => void;
 }) {
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-4">
+    <div className="flex-1 flex flex-col items-center justify-center gap-4">
       <h1>Something went wrong!</h1>
       <h4>{error.name}</h4>
       <p>{error.message}</p>

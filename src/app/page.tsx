@@ -1,3 +1,8 @@
+import { BenefitsSection } from "@/components/home/benefits-section";
+import { CardCarousel } from "@/components/home/card-carousel";
+import { HeroSection } from "@/components/home/hero-section";
+import { NewsletterSection } from "@/components/home/newsletter-section";
+import { SectionDivider } from "@/components/home/section-divider";
 import { getProductById, getProducts } from "@/lib/api/products";
 
 export default async function Home() {
@@ -5,15 +10,24 @@ export default async function Home() {
   const { data: dataById } = await getProductById("wine-2");
 
   return (
-    <div className="flex items-center justify-center bg-zinc-100 gap-4 h-screen">
-      {data.map((wine) => (
-        <div key={wine.id} className="border p-4 rounded-lg bg-background ">
-          {wine.name}
-        </div>
-      ))}
-      <div className="border p-4 rounded-lg bg-background ">
-        <h2>Product by ID:</h2>
-        {dataById.name}
+    <div className="flex-1">
+      <HeroSection />
+      <div className="mx-auto mt-10 mb-20 flex flex-col items-center gap-20">
+        <section className="container-layout">
+          <SectionDivider className="mb-14" text="Fine wines, great prices" />
+          <CardCarousel wines={data} />
+        </section>
+        <BenefitsSection />
+        <section className="container-layout">
+          <SectionDivider className="mb-14" text="Best-selling wines" />
+          <CardCarousel
+            wines={data.filter(({ feature }) => feature === "best")}
+          />
+        </section>
+        <NewsletterSection />
+        <section className="container-layout">
+          <SectionDivider className="mb-14" text="Explore wines" />
+        </section>
       </div>
     </div>
   );

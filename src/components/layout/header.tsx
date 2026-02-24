@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import Logo from "@public/logo.svg";
 import Link from "next/link";
 import { FiHome, FiShoppingCart } from "react-icons/fi";
+import { Typography } from "../ui/typography";
 
 export function Header({
   variant = "fill",
@@ -12,32 +13,38 @@ export function Header({
   return (
     <header
       className={cn(
-        "sticky top-0 w-full font-lora text-[#211F1A]",
-        variant === "gradient"
-          ? "bg-[radial-gradient(95.41%_95.41%_at_50%_50%,#E7B10A,#FDEED1)]"
-          : "bg-[#FDEED1]",
+        "sticky z-20 top-0 w-full font-lora text-on-background",
+        variant === "gradient" ? "bg-gradient-accent-variant" : "bg-background",
       )}
     >
-      <div className="mx-auto max-w-360 px-20 py-4 flex justify-between items-center">
-        <Link href="/">
-          <Button variant="ghost" size="icon">
+      <div className="container-layout py-4 flex justify-between items-center">
+        <Button variant="ghost" size="icon" asChild>
+          <Link href="/">
             <FiHome className="size-7" />
-          </Button>
-        </Link>
+          </Link>
+        </Button>
         <div className="flex gap-14 items-center justify-center">
-          <Link href="/catalog">
-            <Button variant="link">Catalog</Button>
-          </Link>
-          <Logo height={48} fill="#211F1A" />
-          <Link href="/contact-us">
-            <Button variant="link">Contact Us</Button>
-          </Link>
-        </div>
-        <Link href="/cart">
-          <Button variant="ghost" size="icon">
-            <FiShoppingCart className="size-7" />
+          <Button variant="link" asChild>
+            <Link href="/catalog">
+              <Typography variant="title-3" as="span">
+                Catalog
+              </Typography>
+            </Link>
           </Button>
-        </Link>
+          <Logo height={48} className="fill-on-background" />
+          <Button variant="link" asChild>
+            <Link href="/contact-us">
+              <Typography variant="title-3" as="span">
+                Contact Us
+              </Typography>
+            </Link>
+          </Button>
+        </div>
+        <Button variant="ghost" size="icon" asChild>
+          <Link href="/cart">
+            <FiShoppingCart className="size-7" />
+          </Link>
+        </Button>
       </div>
     </header>
   );
