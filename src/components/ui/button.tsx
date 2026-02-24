@@ -5,14 +5,15 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "rounded-sm font-semibold inline-flex items-center",
+  "rounded-sm font-semibold inline-flex items-center justify-center",
   {
     variants: {
       variant: {
         filled: "text-on-primary bg-gradient-accent hover:brightness-107",
         outline: "text-primary border-2 border-primary hover:border-3",
         text: "leading-5 text-surface hover:text-secondary hover:underline",
-        ghost: "text-on-background hover:bg-hover-variant",
+        icon: "border border-primary hover:[&_svg]:scale-130 [&_svg]:transition-transform",
+        ghost: "text-on-background hover:bg-stone-400/20",
         link: "text-on-primary font-medium underline-offset-4 decoration-2 hover:underline",
       },
       size: {
@@ -29,16 +30,18 @@ const buttonVariants = cva(
   },
 );
 
-function Button({
+type ButtonProps = React.ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  };
+
+const Button: React.FC<ButtonProps> = ({
   className,
   variant = "filled",
   size = "medium",
   asChild = false,
   ...props
-}: React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean;
-  }) {
+}) => {
   const Comp = asChild ? Slot : "button";
 
   return (
@@ -50,6 +53,6 @@ function Button({
       {...props}
     />
   );
-}
+};
 
 export { Button, buttonVariants };
