@@ -1,8 +1,8 @@
+import { CardButton } from "@/components/ui/card-button";
 import { cn } from "@/lib/utils";
 import { Wine } from "@/types/wine";
 import Link from "next/link";
 import { ComponentProps } from "react";
-import { CardButton } from "./card-button";
 import { CardContent } from "./card-content";
 
 interface WineCardProps extends ComponentProps<"div"> {

@@ -1,5 +1,6 @@
 import { BenefitsSection } from "@/components/home/benefits-section";
 import { CardCarousel } from "@/components/home/card-carousel";
+import { CategorySection } from "@/components/home/category-section";
 import { HeroSection } from "@/components/home/hero-section";
 import { NewsletterSection } from "@/components/home/newsletter-section";
 import { SectionDivider } from "@/components/home/section-divider";
@@ -25,9 +26,7 @@ export default async function Home() {
           />
         </section>
         <NewsletterSection />
-        <section className="container-layout">
-          <SectionDivider className="mb-14" text="Explore wines" />
-        </section>
+        <CategorySection />
       </div>
     </div>
   );
