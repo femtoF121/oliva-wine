@@ -18,7 +18,7 @@ export function Header({
       )}
     >
       <div className="container-layout py-4 flex justify-between items-center">
-        <Button variant="ghost" size="icon" asChild>
+        <Button variant="icon" size="icon" asChild>
           <Link href="/">
             <FiHome className="size-7" />
           </Link>
@@ -40,7 +40,7 @@ export function Header({
             </Link>
           </Button>
         </div>
-        <Button variant="ghost" size="icon" asChild>
+        <Button variant="icon" size="icon" asChild>
           <Link href="/cart">
             <FiShoppingCart className="size-7" />
           </Link>
