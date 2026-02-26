@@ -32,10 +32,16 @@ export function CarouselButton({
       {...rest}
       variant="icon"
       size="icon"
-      className={cn("border-secondary [&_svg]:stroke-secondary", className)}
+      className={cn(
+        "border border-secondary [&_svg]:stroke-secondary hover:[&_svg]:scale-none",
+        isNext
+          ? "[&_svg]:rotate-0 hover:[&_svg]:translate-x-1"
+          : "[&_svg]:rotate-180 hover:[&_svg]:-translate-x-1",
+        className,
+      )}
       onClick={handleClick}
     >
-      <ChevronRight style={{ rotate: isNext ? "0deg" : "180deg" }} />
+      <ChevronRight />
     </Button>
   );
 }
