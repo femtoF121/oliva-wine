@@ -45,11 +45,11 @@ export function CardContent({ wine, className, ...rest }: CardContentProps) {
               as="span"
               className="line-through text-on-surface-variant-high"
             >
-              {discountedPrice}₴
+              {price}₴
             </Typography>{" "}
           </>
         )}
-        {price}₴
+        {discountedPrice || price}₴
       </Typography>
       <WineFeatures wine={wine} />
     </div>
