@@ -1,3 +1,4 @@
+import { WineType } from "@/types/wine";
 import DeliveryTruck from "@public/home/delivery-truck.svg";
 import LockCard from "@public/home/lock-payment-card.svg";
 import SaleTag from "@public/home/sale-tag.svg";
@@ -28,4 +29,19 @@ export const BENEFITS = [
     description:
       "Quick and careful delivery to ensure your wine arrives in perfect condition",
   },
+];
+
+export const MARQUEE_TEXT = [
+  "Wide range of products",
+  "Natural composition",
+  "Quality in every sip ",
+  "Organic grapes",
+  "Fast delivery",
+  "No sugar",
+];
+
+export const WINE_CATEGORIES: { category: WineType; src: string }[] = [
+  { category: "red", src: "/wines/wine1.png" },
+  { category: "rose", src: "/wines/wine2.png" },
+  { category: "white", src: "/wines/wine3.png" },
 ];

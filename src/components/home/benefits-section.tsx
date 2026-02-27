@@ -1,5 +1,5 @@
-import { BENEFITS } from "@/constants/benefits";
-import { Typography } from "../ui/typography";
+import { Typography } from "@/components/ui/typography";
+import { BENEFITS } from "@/constants/home-page";
 
 export function BenefitsSection() {
   return (

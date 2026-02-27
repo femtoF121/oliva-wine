@@ -1,4 +1,4 @@
-import { WINE_CATEGORIES } from "@/constants/wine-categories";
+import { WINE_CATEGORIES } from "@/constants/home-page";
 import { CategoryCard } from "./category-card";
 import { SectionDivider } from "./section-divider";
 

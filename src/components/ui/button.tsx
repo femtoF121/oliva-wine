@@ -5,15 +5,15 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "rounded-sm font-semibold inline-flex items-center justify-center",
+  "rounded-sm font-inter font-semibold inline-flex items-center justify-center disabled:opacity-50 disabled:hover:bg-transparent",
   {
     variants: {
       variant: {
         filled: "text-on-primary bg-gradient-accent hover:brightness-107",
         outline: "text-primary border-2 border-primary hover:border-3",
         text: "leading-5 text-surface hover:text-secondary hover:underline",
-        icon: "hover:[&_svg]:scale-120 [&_svg]:transition-transform",
-        ghost: "text-on-background hover:bg-stone-400/20",
+        icon: "rounded-sm border border-primary hover:bg-hover-variant hover:[&_svg]:scale-120 [&_svg]:transition-all",
+        "ghost-icon": "hover:[&_svg]:scale-120 [&_svg]:transition-all",
         link: "text-on-primary font-medium underline-offset-4 decoration-2 hover:underline",
       },
       size: {

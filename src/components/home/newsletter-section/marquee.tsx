@@ -1,7 +1,7 @@
-import { MARQUEE_TEXT } from "@/constants/marquee-text";
-import Grapes from "@public/grapes.svg";
+import { Typography } from "@/components/ui/typography";
+import { MARQUEE_TEXT } from "@/constants/home-page";
+import Grapes from "@public/icons/grapes.svg";
 import { Fragment } from "react";
-import { Typography } from "../../ui/typography";
 
 export const Marquee = () => {
   return (

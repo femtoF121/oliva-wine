@@ -11,7 +11,7 @@ export function ToTopButton() {
   return (
     <Button
       size="icon"
-      variant="ghost"
+      variant="ghost-icon"
       onClick={scrollToTop}
       className="bg-gradient-secondary group"
     >
