@@ -10,6 +10,7 @@ export function Header({
 }: {
   variant?: "gradient" | "fill";
 }) {
+  const cartItemsCount = 4;
   return (
     <header
       className={cn(
@@ -40,8 +41,13 @@ export function Header({
             </Link>
           </Button>
         </div>
-        <Button variant="ghost-icon" size="icon" asChild>
+        <Button variant="ghost-icon" size="icon" className="relative" asChild>
           <Link href="/cart">
+            {cartItemsCount > 0 && (
+              <div className="absolute -top-1 -right-1 bg-primary rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                {cartItemsCount}
+              </div>
+            )}
             <FiShoppingCart className="size-7" />
           </Link>
         </Button>
