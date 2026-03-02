@@ -107,6 +107,7 @@
     #fdeed1 100%
   );
   --gradient-secondary: linear-gradient(135deg, #ffd553 0%, #bdb44a 100%);
+
   --gradient-secondary-variant: linear-gradient(
     215.14deg,
     #bdb44a 17.94%,

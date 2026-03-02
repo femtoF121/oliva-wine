@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { TextInput } from "@/components/ui/text-input";
-import { Typography } from "../../ui/typography";
+import { Typography } from "@/components/ui/typography";
 import { Marquee } from "./marquee";
 
 export function NewsletterSection() {

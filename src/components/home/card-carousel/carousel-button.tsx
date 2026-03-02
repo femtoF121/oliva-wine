@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import ChevronRight from "@public/chevron-right.svg";
+import ChevronRight from "@public/icons/chevron-right.svg";
 import { EmblaCarouselType } from "embla-carousel";
 import { ComponentProps } from "react";
 
